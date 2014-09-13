@@ -8,6 +8,22 @@
 
 import UIkit
 
-class user  {
+class user{
+    var him : person = person.init()
+    
+    init(name n:String, profilePic pp:UIImage, friends f : [person]){
+        
+    }
+    init(Person p : person){
+        him = p
+    }
+    
+    func getName() -> String {
+        return him.name
+    }
+    
+    func getFriends()->[person]{
+        return him.friends
+    }
     
 }

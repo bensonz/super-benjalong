@@ -10,7 +10,7 @@ import UIKit
 
 class EventTableViewController : UITableViewController,UITableViewDataSource{
     
-    var events : [singleEvent]
+    var events : [singleEvent]? = nil;
     
     override func viewDidLoad() {
         events = CONSTANTS().events
@@ -18,7 +18,7 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("event") as? EventCell ?? EventCell()
-        var one_event = self.events[indexPath.row]
+        var one_event = self.events![indexPath.row]
         
         cell.event = one_event
         //host @ location @ time
@@ -29,17 +29,13 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.events.count
+        return self.events!.count
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "eventDetail":
-            if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
-                if var cell = sender as? EventCell {
-                    secondViewController.event = cell.event
-                }
-            }
+            break
         case "addNewEvent":
             break
         default:
