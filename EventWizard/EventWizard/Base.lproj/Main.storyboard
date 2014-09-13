@@ -102,21 +102,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Event" id="u9e-Ib-Ck9">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="QVV-gN-Wqq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h2f-5d-nK1">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="IqQ-Dp-Jgn" kind="push" identifier="createEvent" id="FFZ-PP-ltR"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="next" id="QVV-gN-Wqq">
+                            <connections>
+                                <segue destination="IqQ-Dp-Jgn" kind="push" identifier="createOwnEvent" id="dHO-69-oYq"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timePicker" destination="A0g-2G-fdB" id="Cdm-mo-GEg"/>
+                        <outlet property="typePicker" destination="I9z-bb-loi" id="uzL-fX-BPK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIS-7L-ikt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +122,7 @@
         <!--Create your own-->
         <scene sceneID="Sak-vv-G9c">
             <objects>
-                <viewController id="IqQ-Dp-Jgn" customClass="finalizeEvent" customModule="EventWizard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IqQ-Dp-Jgn" customClass="CreateOwnEventViewController" customModule="EventWizard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4wQ-VK-9yd"/>
                         <viewControllerLayoutGuide type="bottom" id="0YM-7I-7Ir"/>
@@ -138,6 +135,9 @@
                                 <rect key="frame" x="16" y="172" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IqQ-Dp-Jgn" id="toj-3S-qx7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete your own event!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7Q-gU-qD1">
                                 <rect key="frame" x="16" y="72" width="288" height="74"/>
@@ -149,34 +149,28 @@
                                 <rect key="frame" x="16" y="246" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IqQ-Dp-Jgn" id="oha-p5-jBr"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create your own" id="POK-XM-4TJ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="vDR-HZ-pcY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gfc-b6-pPO">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wM7-Ps-Wyd" kind="unwind" unwindAction="unwindToList:" id="ate-ot-3Uu"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vDR-HZ-pcY">
+                            <connections>
+                                <action selector="user_done_editing:" destination="IqQ-Dp-Jgn" id="x2Z-8m-XTL"/>
+                                <segue destination="8Nr-tD-fkk" kind="modal" identifier="finalized" id="6NG-lH-kjF"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="doneButton" destination="vDR-HZ-pcY" id="WxX-9l-vzR"/>
-                        <outlet property="eventDoneCreating" destination="Gfc-b6-pPO" id="wdP-Y3-Byz"/>
-                        <outlet property="in_Description" destination="lZk-kD-xTZ" id="Pqe-yg-Isl"/>
-                        <outlet property="in_location" destination="Y5D-9b-VLG" id="3Nq-ft-1cw"/>
+                        <outlet property="in_description" destination="lZk-kD-xTZ" id="Qf7-qL-xQK"/>
+                        <outlet property="in_location" destination="Y5D-9b-VLG" id="zme-Ag-0Od"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbG-le-0Og" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="wM7-Ps-Wyd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-620" y="-17"/>
         </scene>
@@ -196,7 +190,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uyK-Lf-x4S">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DONOTREUSE" id="uyK-Lf-x4S">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uyK-Lf-x4S" id="8Yx-ZW-9ee">
@@ -232,18 +226,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matched Friends" id="1TC-M2-WDH">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="kCr-kv-x7p">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S33-Su-PBh">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8Nr-tD-fkk" kind="push" identifier="doneMatch" id="OCT-By-fZ9"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kCr-kv-x7p"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
@@ -338,7 +321,7 @@
                                 <rect key="frame" x="16" y="142" width="288" height="284"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GNQ-6h-Djk">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsList" id="GNQ-6h-Djk">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GNQ-6h-Djk" id="crL-Qj-m5e">
@@ -396,6 +379,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OCT-By-fZ9"/>
+        <segue reference="6NG-lH-kjF"/>
     </inferredMetricsTieBreakers>
 </document>

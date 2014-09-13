@@ -28,7 +28,7 @@ public class singleEvent {
         self.event_hosts = host;
         self.event_time = time;
         self.event_type = type;
-        dateFormatter.dateFormat = "dd hh:mm"
+        dateFormatter.dateFormat = "EEE hh:mm"
     }
     
     func getEventLocation() -> String{

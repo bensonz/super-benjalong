@@ -12,6 +12,9 @@ class NewEventDisplayViewController: UIViewController,UIPickerViewDelegate {
 
     var event : singleEvent? = nil
     
+    @IBOutlet weak var typePicker: UIPickerView!
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,5 +32,19 @@ class NewEventDisplayViewController: UIViewController,UIPickerViewDelegate {
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return singleEvent.types.allValues[row].toRaw()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier {
+        case "createOwnEvent":
+            if var secondViewController = segue.destinationViewController as? CreateOwnEventViewController{
+                secondViewController.type = singleEvent.types.allValues[0]
+                secondViewController.time = self.timePicker.date
+            }
+        case "searchMatch":
+            break
+        default:
+            break
+        }
     }
 }
