@@ -160,7 +160,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vDR-HZ-pcY">
                             <connections>
                                 <action selector="user_done_editing:" destination="IqQ-Dp-Jgn" id="x2Z-8m-XTL"/>
-                                <segue destination="8Nr-tD-fkk" kind="modal" identifier="finalized" id="6NG-lH-kjF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -360,6 +359,7 @@
         <scene sceneID="lMW-N5-crH">
             <objects>
                 <navigationController id="9lQ-hh-tal" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pJb-fP-jVR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Uz-ZM-T78">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -379,6 +379,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="6NG-lH-kjF"/>
+        <segue reference="gXJ-Kx-maH"/>
     </inferredMetricsTieBreakers>
 </document>

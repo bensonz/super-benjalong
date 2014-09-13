@@ -37,14 +37,13 @@ class NewEventDisplayViewController: UIViewController,UIPickerViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "createOwnEvent":
-            if var secondViewController = segue.destinationViewController as? CreateOwnEventViewController{
-                secondViewController.type = singleEvent.types.allValues[0]
-                secondViewController.time = self.timePicker.date
+            if var secondViewController = segue.destinationViewController as? CreateOwnEventViewController {
+                secondViewController.type = singleEvent.types.eat
+                secondViewController.time = NSDate.date()
             }
-        case "searchMatch":
-            break
         default:
             break
         }
+
     }
 }

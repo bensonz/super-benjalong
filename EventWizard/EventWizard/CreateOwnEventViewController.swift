@@ -34,12 +34,12 @@ class CreateOwnEventViewController :UIViewController {
     }
     @IBAction func user_done_editing(sender: AnyObject) {
         self.view.endEditing(true)
-        self.event = singleEvent(eventHosts: [userName], eventTime: time!, eventLocation: in_location.text, eventType: type!)
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "finalized":
             if var secondViewController = segue.destinationViewController as? EventTableViewController {
+                self.event = singleEvent(eventHosts: [userName], eventTime: time!, eventLocation: in_location.text, eventType: type!)
                 secondViewController.events.append(event!)
             }
         default:
