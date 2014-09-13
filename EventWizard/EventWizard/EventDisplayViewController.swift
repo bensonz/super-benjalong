@@ -15,6 +15,7 @@ class EventDisplayViewController: UIViewController {
     @IBOutlet weak var hosts: UILabel!
     @IBOutlet weak var name: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
