@@ -21,9 +21,9 @@ class EventTableViewController : UITableViewController{
         
         cell.eventName.text = all_events.getEventName()
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = /*find out and place date format from http://userguide.icu-project.org/formatparse/datetime*/
-        let date = dateFormatter.dateFromString(/*your_date_string*/)
-        cell.eventTime.text = all_events.getEventTime()
+        //dateFormatter.dateFormat =
+        let date = dateFormatter.stringFromDate(all_events.getEventTime())
+        cell.eventTime.text = date
         
         return cell
     }
@@ -35,10 +35,9 @@ class EventTableViewController : UITableViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "tableToDisplay":
-            if var secondViewController = segue.destinationViewController as? ReminderDisplayViewController {
-                if var cell = sender as? ReminderCellTableViewCell {
-                    secondViewController.titleString = cell.reminderTitle.text!
-                    secondViewController.dateString = cell.reminderDate.text!
+            if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
+                if var cell = sender as? EventDisplayViewController {
+                    //do nothing
                 }
             }
         default:
