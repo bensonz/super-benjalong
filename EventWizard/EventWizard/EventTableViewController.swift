@@ -34,7 +34,7 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
-        case "tableToDisplay":
+        case "eventDetail":
             if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
                 if var cell = sender as? EventDisplayViewController {
                     //do nothing
