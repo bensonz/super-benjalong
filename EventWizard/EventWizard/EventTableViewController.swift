@@ -9,14 +9,11 @@
 import UIKit
 
 class EventTableViewController : UITableViewController,UITableViewDataSource{
-    //var events : [singleEvent]
     
-    var events : [singleEvent] = [
-    singleEvent(eventHosts: ["BENSON"], eventTime: NSDate.date(), eventLocation: "OE", eventType: singleEvent.types.eat),
-    singleEvent(eventHosts: ["LEO","JASON"], eventTime: NSDate.date(), eventLocation: "Gates", eventType: singleEvent.types.study)
-    ];
+    var events : [singleEvent]
     
     override func viewDidLoad() {
+        events = CONSTANTS().events
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
