@@ -17,16 +17,6 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     ];
     
     override func viewDidLoad() {
-        let file_name = "test.txt"
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("data", ofType: "txt")
-            
-        //writing
-        events.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
-            
-        /*reading
-        let text2 = String.stringWithContentsOfFile(path, encoding: NSUTF8StringEncoding, error: nil)
-        */
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,7 +45,6 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
             }
         case "addNewEvent":
             break
-
         default:
             break
         }

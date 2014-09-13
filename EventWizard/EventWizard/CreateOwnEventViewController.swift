@@ -38,11 +38,8 @@ class CreateOwnEventViewController :UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "finalized":
-            if var secondViewController = segue.destinationViewController as? EventTableViewController {
-                self.event = singleEvent(eventHosts: [userName], eventTime: time!, eventLocation: in_location.text, eventType: type!)
-                secondViewController.events.append(event!)
-                println(event?.toString())
-            }
+            
+            break
         default:
             break
         }

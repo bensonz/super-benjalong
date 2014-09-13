@@ -78,5 +78,4 @@ public class singleEvent {
         str += event_type.toRaw()
         return str
     }
-    
 }
