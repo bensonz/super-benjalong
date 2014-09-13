@@ -32,5 +32,9 @@ public class singleEvent {
     func setEventName(name n:String)->Void{
         self.event_name = n;
     }
+    
+    func addEventHost(newhost h:String) -> Void{
+        event_hosts.append(h);
+    }
     //not allowed to change time or host
 }

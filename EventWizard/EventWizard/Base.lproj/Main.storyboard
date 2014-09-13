@@ -51,12 +51,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="5Es-I9-HdA" kind="push" id="Ych-iS-La4"/>
+                        <segue destination="5Es-I9-HdA" kind="push" identifier="eventDetail" id="Ych-iS-La4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbr-WI-Dd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626" y="233"/>
+            <point key="canvasLocation" x="-1626" y="241"/>
         </scene>
         <!--Event Detail-->
         <scene sceneID="lP2-pz-eox">
