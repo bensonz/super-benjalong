@@ -1,5 +1,5 @@
 //
-//  eventSuperClass.swift
+//  singleEvent.swift
 //  EventWizard
 //
 //  Created by Bz on 9/12/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class eventSuperClass {
+public class singleEvent {
     private var event_name : String;
     private var event_hosts : [String];
     private var event_time : NSDate;
