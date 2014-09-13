@@ -10,8 +10,9 @@ import UIKit
 
 class EventCell : UITableViewCell{
     
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var eventTime: UILabel!
+    @IBOutlet weak var l_eHostsATlocationATtime: UILabel!
+    
+    var event : singleEvent? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()

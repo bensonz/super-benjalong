@@ -11,20 +11,23 @@ import UIKit
 class EventTableViewController : UITableViewController,UITableViewDataSource{
     
     var events : [singleEvent] = [
-        singleEvent(eventName: "Eating", eventHosts: ["Benson"], eventTime: NSDate.date()),
-        singleEvent(eventName: "Studying", eventHosts: ["Leo,Jason"], eventTime: NSDate.date())
+        singleEvent(eventHosts: ["BENSON"], eventTime: NSDate.date(), eventLocation: "OE", eventType: singleEvent.types.eat),
+        singleEvent(eventHosts: ["LEO","JASON"], eventTime: NSDate.date(), eventLocation: "Gates", eventType: singleEvent.types.study)
         ];
+    
+    override func viewDidAppear(animated: Bool) {
+        
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("event") as? EventCell ?? EventCell()
-        var all_events = self.events[indexPath.row]
+        var one_event = self.events[indexPath.row]
         
-        cell.eventName.text = all_events.getEventName()
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MM-dd hh:mm"
-        let date = dateFormatter.stringFromDate(all_events.getEventTime())
-        cell.eventTime.text = date
-        
+        cell.event = one_event
+        //host @ location @ time
+        var hlt :String = one_event.getEventType() + " @ " +
+            one_event.getEventLocation() + " @ " + one_event.getEventTimeInStringFormat()
+        cell.l_eHostsATlocationATtime.text = hlt
         return cell
     }
     
@@ -36,11 +39,13 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
         switch segue.identifier {
         case "eventDetail":
             if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
-                if var cell = sender as? EventDisplayViewController {
-                    secondViewController.eventHost = cell.eventHost
-                    secondViewController.eventName = cell.eventName
+                if var cell = sender as? EventCell {
+                    secondViewController.event = cell.event
                 }
             }
+        case "addNewEvent":
+            break
+
         default:
             break
         }
