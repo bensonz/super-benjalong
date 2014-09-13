@@ -39,6 +39,17 @@ class CreateOwnEventViewController :UIViewController {
         switch segue.identifier {
         case "finalized":
             //self.navigationController?.popToRootViewControllerAnimated(true)
+            var nnn : String
+            if CONSTANTS().currentUser != nil{
+                nnn = CONSTANTS().currentUser!.getName()
+            }else{
+                nnn = "BZ"
+            }
+            var newEvent = singleEvent(eventHosts: [nnn],
+                eventTime: time!,
+                eventLocation: in_location.text,
+                eventType: type!)
+            CONSTANTS().events.append(newEvent)
             break
         default:
             break

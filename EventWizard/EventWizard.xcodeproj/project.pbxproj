@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2223CD2819C4F0D900B6A40C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2223CD2719C4F0D900B6A40C /* FacebookSDK.framework */; };
 		2293351F19C490DE00A4DE39 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2293351E19C490DE00A4DE39 /* test.txt */; };
 		229FB4DC19C4B5B000183846 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FB4DB19C4B5B000183846 /* InviteViewController.swift */; };
 		229FB4E019C4B75F00183846 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FB4DF19C4B75F00183846 /* user.swift */; };
@@ -24,6 +25,7 @@
 		22AEF36919C3E01000BCE690 /* EventDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */; };
 		22AEF36B19C43CA400BCE690 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36A19C43CA400BCE690 /* NewEventViewController.swift */; };
 		22C50B4719C459A8000276B9 /* CreateOwnEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C50B4619C459A8000276B9 /* CreateOwnEventViewController.swift */; };
+		C42607F119C4DF6100239248 /* startScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42607F019C4DF6100239248 /* startScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2223CD2719C4F0D900B6A40C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = EventWizard/FacebookSDK.framework; sourceTree = "<group>"; };
 		2293351E19C490DE00A4DE39 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = SOURCE_ROOT; };
 		229FB4DB19C4B5B000183846 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		229FB4DF19C4B75F00183846 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
@@ -58,6 +61,8 @@
 		22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDisplayViewController.swift; sourceTree = "<group>"; };
 		22AEF36A19C43CA400BCE690 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		22C50B4619C459A8000276B9 /* CreateOwnEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateOwnEventViewController.swift; sourceTree = "<group>"; };
+		C42607F019C4DF6100239248 /* startScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startScreenViewController.swift; sourceTree = "<group>"; };
+		C42607F219C4DF8000239248 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2223CD2819C4F0D900B6A40C /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,7 @@
 		22AEF33019C3CFF600BCE690 = {
 			isa = PBXGroup;
 			children = (
+				C42607F519C4E07F00239248 /* Frameworks */,
 				22AEF33B19C3CFF600BCE690 /* EventWizard */,
 				22AEF35119C3CFF600BCE690 /* EventWizardTests */,
 				22AEF33A19C3CFF600BCE690 /* Products */,
@@ -123,6 +130,7 @@
 				22AEF36C19C43DC600BCE690 /* ViewController */,
 				22AEF33E19C3CFF600BCE690 /* AppDelegate.swift */,
 				22AEF34219C3CFF600BCE690 /* Main.storyboard */,
+				C42607F219C4DF8000239248 /* Bridging-Header.h */,
 				22AEF34519C3CFF600BCE690 /* Images.xcassets */,
 				22AEF34719C3CFF600BCE690 /* LaunchScreen.xib */,
 				2293351E19C490DE00A4DE39 /* test.txt */,
@@ -163,10 +171,19 @@
 				22AEF36A19C43CA400BCE690 /* NewEventViewController.swift */,
 				22AEF36619C3DEDB00BCE690 /* EventTableViewController.swift */,
 				22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */,
+				C42607F019C4DF6100239248 /* startScreenViewController.swift */,
 				22C50B4619C459A8000276B9 /* CreateOwnEventViewController.swift */,
 				229FB4DB19C4B5B000183846 /* InviteViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C42607F519C4E07F00239248 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2223CD2719C4F0D900B6A40C /* FacebookSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +291,7 @@
 				229FB4DC19C4B5B000183846 /* InviteViewController.swift in Sources */,
 				229FB4E019C4B75F00183846 /* user.swift in Sources */,
 				22AEF36919C3E01000BCE690 /* EventDisplayViewController.swift in Sources */,
+				C42607F119C4DF6100239248 /* startScreenViewController.swift in Sources */,
 				22AEF36519C3DE5600BCE690 /* EventCell.swift in Sources */,
 				22AEF36319C3D7AA00BCE690 /* singleEvent.swift in Sources */,
 				22AEF33F19C3CFF600BCE690 /* AppDelegate.swift in Sources */,
@@ -405,10 +423,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leojiang/Desktop/FacebookSDK,
+					"$(PROJECT_DIR)/EventWizard",
+				);
 				INFOPLIST_FILE = EventWizard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EventWizard/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -418,10 +442,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leojiang/Desktop/FacebookSDK,
+					"$(PROJECT_DIR)/EventWizard",
+				);
 				INFOPLIST_FILE = EventWizard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EventWizard/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

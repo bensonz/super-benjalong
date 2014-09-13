@@ -12,7 +12,9 @@ class user{
     var him : person = person.init()
     
     init(name n:String, profilePic pp:UIImage, friends f : [person]){
-        
+        him.name = n
+        him.profilePic = pp
+        him.friends = f
     }
     init(Person p : person){
         him = p

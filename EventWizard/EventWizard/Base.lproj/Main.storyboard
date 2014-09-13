@@ -4,6 +4,58 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
+        <!--Login-->
+        <scene sceneID="x5h-9z-oxk">
+            <objects>
+                <viewController id="TOj-2t-waH" customClass="startScreenViewController" customModule="EventWizard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIx-o6-7Fy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Voc-9B-daC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yG2-gH-U8z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EventWIzard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yln-rH-ElR">
+                                <rect key="frame" x="106" y="85" width="109" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kCo-eW-QnS">
+                                <rect key="frame" x="40" y="156" width="240" height="272"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mg7-r7-b0p" customClass="FBLoginView">
+                                <rect key="frame" x="40" y="460" width="240" height="52"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="kKJ-ry-scQ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Xxj-bL-RHa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JsE-FA-Dsf">
+                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8Nr-tD-fkk" kind="push" identifier="home" id="csA-lO-Dm4"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Title_label" destination="yln-rH-ElR" id="8TN-F5-C32"/>
+                        <outlet property="fbLoginView" destination="Mg7-r7-b0p" id="RiO-zf-y8J"/>
+                        <outlet property="title_image" destination="kCo-eW-QnS" id="UpK-er-EfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLU-rR-wBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584" y="297"/>
+        </scene>
         <!--Home-->
         <scene sceneID="8Cs-dw-uWB">
             <objects>
@@ -50,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzM-ek-NWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="253"/>
+            <point key="canvasLocation" x="-1986" y="377"/>
         </scene>
         <!--New Event-->
         <scene sceneID="JLK-LO-xiG">
@@ -384,12 +436,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8Nr-tD-fkk" kind="relationship" relationship="rootViewController" id="gXJ-Kx-maH"/>
+                        <segue destination="TOj-2t-waH" kind="relationship" relationship="rootViewController" id="Wer-hu-XBv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPZ-82-7P2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2166" y="241"/>
+            <point key="canvasLocation" x="-3334" y="297"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -398,6 +450,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OJ3-KN-5Wp"/>
+        <segue reference="v6z-1c-2DB"/>
     </inferredMetricsTieBreakers>
 </document>

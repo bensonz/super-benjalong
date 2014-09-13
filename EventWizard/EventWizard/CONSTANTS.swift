@@ -31,6 +31,7 @@ class CONSTANTS {
     //This class stores all the constants!
     var events : [singleEvent] = []
     var users : [user] = []
+    var currentUser : user? = nil
     
     init(){
         events = [
