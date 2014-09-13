@@ -9,14 +9,24 @@
 import UIKit
 
 class EventTableViewController : UITableViewController,UITableViewDataSource{
+    //var events : [singleEvent]
     
     var events : [singleEvent] = [
-        singleEvent(eventHosts: ["BENSON"], eventTime: NSDate.date(), eventLocation: "OE", eventType: singleEvent.types.eat),
-        singleEvent(eventHosts: ["LEO","JASON"], eventTime: NSDate.date(), eventLocation: "Gates", eventType: singleEvent.types.study)
-        ];
+    singleEvent(eventHosts: ["BENSON"], eventTime: NSDate.date(), eventLocation: "OE", eventType: singleEvent.types.eat),
+    singleEvent(eventHosts: ["LEO","JASON"], eventTime: NSDate.date(), eventLocation: "Gates", eventType: singleEvent.types.study)
+    ];
     
-    override func viewDidAppear(animated: Bool) {
-        
+    override func viewDidLoad() {
+        let file_name = "test.txt"
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("data", ofType: "txt")
+            
+        //writing
+        events.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
+            
+        /*reading
+        let text2 = String.stringWithContentsOfFile(path, encoding: NSUTF8StringEncoding, error: nil)
+        */
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

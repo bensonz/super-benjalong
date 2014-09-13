@@ -41,6 +41,7 @@ class CreateOwnEventViewController :UIViewController {
             if var secondViewController = segue.destinationViewController as? EventTableViewController {
                 self.event = singleEvent(eventHosts: [userName], eventTime: time!, eventLocation: in_location.text, eventType: type!)
                 secondViewController.events.append(event!)
+                println(event?.toString())
             }
         default:
             break

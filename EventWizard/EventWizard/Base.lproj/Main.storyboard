@@ -160,6 +160,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vDR-HZ-pcY">
                             <connections>
                                 <action selector="user_done_editing:" destination="IqQ-Dp-Jgn" id="x2Z-8m-XTL"/>
+                                <segue destination="8Nr-tD-fkk" kind="push" identifier="finalized" id="Njx-wc-BMG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -379,6 +380,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gXJ-Kx-maH"/>
+        <segue reference="Njx-wc-BMG"/>
     </inferredMetricsTieBreakers>
 </document>

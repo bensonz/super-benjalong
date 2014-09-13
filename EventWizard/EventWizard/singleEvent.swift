@@ -70,4 +70,13 @@ public class singleEvent {
         str += event_hosts[event_hosts.count-1]
         return str;
     }
+    func toString()->String{
+        var str = ""
+        str += getEventHostsInStringFormat()
+        str += event_location
+        str += getEventTimeInStringFormat()
+        str += event_type.toRaw()
+        return str
+    }
+    
 }
