@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EventTableViewController : UITableViewController{
+class EventTableViewController : UITableViewController,UITableViewDataSource{
     
     var events : [singleEvent] = [
-        singleEvent(eventName: "Eating", eventHosts: ["Benson"], eventTime: NSDate(timeIntervalSinceNow: 10)),
-        singleEvent(eventName: "Studying", eventHosts: ["Leo"], eventTime: NSDate(timeIntervalSinceNow: 100))
-    ];
+        singleEvent(eventName: "Eating", eventHosts: ["Benson"], eventTime: NSDate.date()),
+        singleEvent(eventName: "Studying", eventHosts: ["Leo,Jason"], eventTime: NSDate.date())
+        ];
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("event") as? EventCell ?? EventCell()
@@ -21,7 +21,7 @@ class EventTableViewController : UITableViewController{
         
         cell.eventName.text = all_events.getEventName()
         let dateFormatter = NSDateFormatter()
-        //dateFormatter.dateFormat =
+        dateFormatter.dateFormat = "MM-dd hh:mm"
         let date = dateFormatter.stringFromDate(all_events.getEventTime())
         cell.eventTime.text = date
         
