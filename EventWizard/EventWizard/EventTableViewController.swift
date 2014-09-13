@@ -37,7 +37,8 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
         case "eventDetail":
             if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
                 if var cell = sender as? EventDisplayViewController {
-                    secondViewController.
+                    secondViewController.eventHost = cell.eventHost
+                    secondViewController.eventName = cell.eventName
                 }
             }
         default:

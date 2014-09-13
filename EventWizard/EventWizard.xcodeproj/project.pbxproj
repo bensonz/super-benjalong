@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		22AEF33F19C3CFF600BCE690 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF33E19C3CFF600BCE690 /* AppDelegate.swift */; };
+		22AEF34419C3CFF600BCE690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22AEF34219C3CFF600BCE690 /* Main.storyboard */; };
 		22AEF34619C3CFF600BCE690 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22AEF34519C3CFF600BCE690 /* Images.xcassets */; };
+		22AEF34919C3CFF600BCE690 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AEF34719C3CFF600BCE690 /* LaunchScreen.xib */; };
 		22AEF35519C3CFF600BCE690 /* EventWizardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF35419C3CFF600BCE690 /* EventWizardTests.swift */; };
 		22AEF36319C3D7AA00BCE690 /* singleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36219C3D7AA00BCE690 /* singleEvent.swift */; };
 		22AEF36519C3DE5600BCE690 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36419C3DE5600BCE690 /* EventCell.swift */; };
 		22AEF36719C3DEDB00BCE690 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36619C3DEDB00BCE690 /* EventTableViewController.swift */; };
 		22AEF36919C3E01000BCE690 /* EventDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */; };
-		C476799119C3ECF3003D2EFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C476799019C3ECF3003D2EFA /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,9 @@
 		22AEF33919C3CFF600BCE690 /* EventWizard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventWizard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEF33D19C3CFF600BCE690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22AEF33E19C3CFF600BCE690 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22AEF34319C3CFF600BCE690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22AEF34519C3CFF600BCE690 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		22AEF34819C3CFF600BCE690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		22AEF34E19C3CFF600BCE690 /* EventWizardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventWizardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22AEF35319C3CFF600BCE690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22AEF35419C3CFF600BCE690 /* EventWizardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWizardTests.swift; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		22AEF36419C3DE5600BCE690 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		22AEF36619C3DEDB00BCE690 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDisplayViewController.swift; sourceTree = "<group>"; };
-		C476799019C3ECF3003D2EFA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../../../../../.Trash/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +85,12 @@
 			children = (
 				22AEF33E19C3CFF600BCE690 /* AppDelegate.swift */,
 				22AEF36219C3D7AA00BCE690 /* singleEvent.swift */,
+				22AEF34219C3CFF600BCE690 /* Main.storyboard */,
 				22AEF36619C3DEDB00BCE690 /* EventTableViewController.swift */,
 				22AEF36819C3E01000BCE690 /* EventDisplayViewController.swift */,
 				22AEF36419C3DE5600BCE690 /* EventCell.swift */,
-				C476799019C3ECF3003D2EFA /* LaunchScreen.xib */,
 				22AEF34519C3CFF600BCE690 /* Images.xcassets */,
+				22AEF34719C3CFF600BCE690 /* LaunchScreen.xib */,
 				22AEF33C19C3CFF600BCE690 /* Supporting Files */,
 			);
 			path = EventWizard;
@@ -198,7 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C476799119C3ECF3003D2EFA /* LaunchScreen.xib in Resources */,
+				22AEF34419C3CFF600BCE690 /* Main.storyboard in Resources */,
+				22AEF34919C3CFF600BCE690 /* LaunchScreen.xib in Resources */,
 				22AEF34619C3CFF600BCE690 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +246,25 @@
 			targetProxy = 22AEF34F19C3CFF600BCE690 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22AEF34219C3CFF600BCE690 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22AEF34319C3CFF600BCE690 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22AEF34719C3CFF600BCE690 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22AEF34819C3CFF600BCE690 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		22AEF35619C3CFF600BCE690 /* Debug */ = {

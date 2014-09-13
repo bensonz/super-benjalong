@@ -8,7 +8,12 @@
 import UIKit
 
 class EventDisplayViewController: UIViewController {
+    var eventHost : String = "";
+    var eventName : String = "";
+    var eventTime : NSDate? = nil;
     
+    @IBOutlet weak var hosts: UILabel!
+    @IBOutlet weak var name: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +22,9 @@ class EventDisplayViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func eventNameUpdate(sender: AnyObject) {
     }
     
 }
