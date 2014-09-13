@@ -38,7 +38,7 @@ class CreateOwnEventViewController :UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "finalized":
-            
+            //self.navigationController?.popToRootViewControllerAnimated(true)
             break
         default:
             break

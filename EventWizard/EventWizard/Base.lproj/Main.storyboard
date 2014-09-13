@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzM-ek-NWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1644" y="241"/>
+            <point key="canvasLocation" x="-1652" y="253"/>
         </scene>
         <!--New Event-->
         <scene sceneID="JLK-LO-xiG">
@@ -160,7 +160,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="vDR-HZ-pcY">
                             <connections>
                                 <action selector="user_done_editing:" destination="IqQ-Dp-Jgn" id="x2Z-8m-XTL"/>
-                                <segue destination="9lQ-hh-tal" kind="modal" identifier="finalized" id="q9Q-Lb-jQg"/>
+                                <segue destination="9lQ-hh-tal" kind="modal" identifier="finalized" id="ogZ-Tq-IHi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbG-le-0Og" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="-17"/>
+            <point key="canvasLocation" x="-736" y="-469"/>
         </scene>
         <!--Matched Friends-->
         <scene sceneID="A2z-vh-N3q">
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sd1-b2-c6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="726"/>
+            <point key="canvasLocation" x="-1428" y="1350"/>
         </scene>
         <!--Event Detail-->
         <scene sceneID="lP2-pz-eox">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94A-65-y5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1635" y="1027"/>
+            <point key="canvasLocation" x="-2079" y="975"/>
         </scene>
         <!--Invite Friends-->
         <scene sceneID="SWX-nA-USU">
@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic4-D4-ROy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1150" y="1026"/>
+            <point key="canvasLocation" x="-2558" y="1698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMW-N5-crH">
@@ -384,6 +384,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="v6z-1c-2DB"/>
+        <segue reference="ogZ-Tq-IHi"/>
     </inferredMetricsTieBreakers>
 </document>
