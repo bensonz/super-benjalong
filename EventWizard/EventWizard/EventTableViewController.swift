@@ -10,10 +10,11 @@ import UIKit
 
 class EventTableViewController : UITableViewController,UITableViewDataSource{
     
+    var RSManager : ItemsManager = ItemsManager()
     var events : [singleEvent]? = nil;
     
     override func viewDidLoad() {
-        events = CONSTANTS().events
+        events = RSManager.items
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -35,13 +36,24 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "eventDetail":
-            break
+            // transfer details to the next view controller
+            if var secondViewController = segue.destinationViewController as? EventDisplayViewController {
+                if var cell = sender as? EventCell {
+                    secondViewController.event = cell.event
+                }
+            }
         case "addNewEvent":
+            // Here we only need to get back the event, so nothing to do for creating one
             break
         default:
             break
         }
         
+    }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue){
+        // we can do something here
+        // Like save
     }
 
 }

@@ -18,10 +18,10 @@ class CreateOwnEventViewController :UIViewController {
     @IBOutlet weak var in_description: UITextField!
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
-        
+        super.didReceiveMemoryWarning()
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) -> Void {
@@ -32,9 +32,11 @@ class CreateOwnEventViewController :UIViewController {
         self.view.endEditing(true)
         return true
     }
+    
     @IBAction func user_done_editing(sender: AnyObject) {
         self.view.endEditing(true)
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "finalized":
@@ -49,6 +51,7 @@ class CreateOwnEventViewController :UIViewController {
                 eventTime: time!,
                 eventLocation: in_location.text,
                 eventType: type!)
+            
             CONSTANTS().events.append(newEvent)
             break
         default:

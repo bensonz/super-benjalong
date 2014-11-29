@@ -39,7 +39,7 @@ class NewEventDisplayViewController: UIViewController,UIPickerViewDelegate {
         case "createOwnEvent":
             if var secondViewController = segue.destinationViewController as? CreateOwnEventViewController {
                 secondViewController.type = singleEvent.types.allValues[typePicker.selectedRowInComponent(0)]
-                secondViewController.time = NSDate.date()
+                secondViewController.time = timePicker.date
             }
         default:
             break

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2223CD2819C4F0D900B6A40C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2223CD2719C4F0D900B6A40C /* FacebookSDK.framework */; };
-		2293351F19C490DE00A4DE39 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2293351E19C490DE00A4DE39 /* test.txt */; };
+		227885181A2963C4003769B9 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227885171A2963C4003769B9 /* ItemManager.swift */; };
 		229FB4DC19C4B5B000183846 /* InviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FB4DB19C4B5B000183846 /* InviteViewController.swift */; };
 		229FB4E019C4B75F00183846 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FB4DF19C4B75F00183846 /* user.swift */; };
 		229FB4E219C4B9B300183846 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229FB4E119C4B9B300183846 /* FriendCell.swift */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		2223CD2719C4F0D900B6A40C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = EventWizard/FacebookSDK.framework; sourceTree = "<group>"; };
-		2293351E19C490DE00A4DE39 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = SOURCE_ROOT; };
+		227885171A2963C4003769B9 /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		229FB4DB19C4B5B000183846 /* InviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteViewController.swift; sourceTree = "<group>"; };
 		229FB4DF19C4B75F00183846 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		229FB4E119C4B9B300183846 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
@@ -99,6 +99,7 @@
 				22AEF36219C3D7AA00BCE690 /* singleEvent.swift */,
 				229FB4DF19C4B75F00183846 /* user.swift */,
 				229FB4E319C4BBEC00183846 /* CONSTANTS.swift */,
+				227885171A2963C4003769B9 /* ItemManager.swift */,
 			);
 			name = definitionClass;
 			sourceTree = "<group>";
@@ -133,7 +134,6 @@
 				C42607F219C4DF8000239248 /* Bridging-Header.h */,
 				22AEF34519C3CFF600BCE690 /* Images.xcassets */,
 				22AEF34719C3CFF600BCE690 /* LaunchScreen.xib */,
-				2293351E19C490DE00A4DE39 /* test.txt */,
 				229FB4E519C4C23A00183846 /* default.png */,
 				22AEF33C19C3CFF600BCE690 /* Supporting Files */,
 			);
@@ -268,7 +268,6 @@
 			files = (
 				22AEF34419C3CFF600BCE690 /* Main.storyboard in Resources */,
 				22AEF34919C3CFF600BCE690 /* LaunchScreen.xib in Resources */,
-				2293351F19C490DE00A4DE39 /* test.txt in Resources */,
 				22AEF34619C3CFF600BCE690 /* Images.xcassets in Resources */,
 				229FB4E619C4C23A00183846 /* default.png in Resources */,
 			);
@@ -294,6 +293,7 @@
 				C42607F119C4DF6100239248 /* startScreenViewController.swift in Sources */,
 				22AEF36519C3DE5600BCE690 /* EventCell.swift in Sources */,
 				22AEF36319C3D7AA00BCE690 /* singleEvent.swift in Sources */,
+				227885181A2963C4003769B9 /* ItemManager.swift in Sources */,
 				22AEF33F19C3CFF600BCE690 /* AppDelegate.swift in Sources */,
 				22AEF36B19C43CA400BCE690 /* NewEventViewController.swift in Sources */,
 				229FB4E419C4BBEC00183846 /* CONSTANTS.swift in Sources */,

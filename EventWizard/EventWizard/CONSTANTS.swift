@@ -26,22 +26,3 @@ struct person {
     }
     
 }
-
-class CONSTANTS {
-    //This class stores all the constants!
-    var events : [singleEvent] = []
-    var users : [user] = []
-    var currentUser : user? = nil
-    
-    init(){
-        events = [
-            singleEvent(eventHosts: ["BENSON"], eventTime: NSDate.date(), eventLocation: "OE", eventType: singleEvent.types.eat),
-            singleEvent(eventHosts: ["LEO","JASON"], eventTime: NSDate.date(), eventLocation: "Gates", eventType: singleEvent.types.study)
-        ];
-        
-        users = [
-           
-        ];
-    }
-    
-}
