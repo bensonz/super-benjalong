@@ -40,19 +40,15 @@ class CreateOwnEventViewController :UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         switch segue.identifier {
         case "finalized":
-            //self.navigationController?.popToRootViewControllerAnimated(true)
-            var nnn : String
-            if CONSTANTS().currentUser != nil{
-                nnn = CONSTANTS().currentUser!.getName()
-            }else{
-                nnn = "BZ"
+            if var secondViewController = segue.destinationViewController as? EventTableViewController {
+                var nnn : String = "BZ"
+                // nnn should be curUser name.
+                var newEvent = singleEvent(eventHosts: [nnn],
+                    eventTime: time!,
+                    eventLocation: in_location.text,
+                    eventType: type!)
+                secondViewController.RSManager.items.append(newEvent)
             }
-            var newEvent = singleEvent(eventHosts: [nnn],
-                eventTime: time!,
-                eventLocation: in_location.text,
-                eventType: type!)
-            
-            CONSTANTS().events.append(newEvent)
             break
         default:
             break

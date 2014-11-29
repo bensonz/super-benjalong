@@ -52,8 +52,9 @@ class EventTableViewController : UITableViewController,UITableViewDataSource{
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue){
-        // we can do something here
-        // Like save
+        if (segue.identifier == "finalized"){
+            RSManager.save()
+        }
     }
 
 }

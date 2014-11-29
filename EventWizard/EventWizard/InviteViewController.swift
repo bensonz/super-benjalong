@@ -15,7 +15,9 @@ class InviteViewController : UIViewController,UITableViewDelegate,UITableViewDat
     var friends : [user]? = nil
     
     override func viewDidLoad() {
-        friends = CONSTANTS().users
+        // TODO:
+        // update friends according to user's friends
+        friends = nil
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

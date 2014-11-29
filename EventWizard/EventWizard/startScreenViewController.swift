@@ -43,7 +43,7 @@ class startScreenViewController: UIViewController, FBLoginViewDelegate {
             var login_status: FBRequestConnection = friendsRequest.startWithCompletionHandler{(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
                 println("friendsRequest: \(friendsRequest)");
             }
-            CONSTANTS().currentUser = user(name: usr.name, profilePic: UIImage(named: "default.png"), friends: [])
+            //currentUser = user(name: usr.name, profilePic: UIImage(named: "default.png"), friends: [])
         }
     
         
